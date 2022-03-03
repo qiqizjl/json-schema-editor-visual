@@ -37,7 +37,7 @@ const GenerateSchema = require('generate-schema/src/schemas/json.js');
 const utils = require('./utils');
 import CustomItem from './components/SchemaComponents/SchemaOther.jsx';
 import LocalProvider from './components/LocalProvider/index.js';
-import MockSelect from './components/MockSelect/index.jsxx';
+import MockSelect from './components/MockSelect/index.jsx';
 
 
 

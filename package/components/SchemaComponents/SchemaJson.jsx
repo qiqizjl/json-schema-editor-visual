@@ -34,7 +34,7 @@ import { JSONPATH_JOIN_CHAR, SCHEMA_TYPE } from '../../utils.js';
 const InputGroup = Input.Group;
 import LocaleProvider from '../LocalProvider/index.js';
 import utils from '../../utils';
-import MockSelect from '../MockSelect/index.js';
+import MockSelect from '../MockSelect/index.jsx';
 
 const mapping = (name, data, showEdit, showAdv) => {
   switch (data.type) {

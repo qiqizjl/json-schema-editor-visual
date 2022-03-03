@@ -23,7 +23,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { JSONPATH_JOIN_CHAR, SCHEMA_TYPE } from '../../utils.js';
 const Option = Select.Option;
-import AceEditor from '../AceEditor/AceEditor.js';
+import AceEditor from '../AceEditor/AceEditor.jsx';
 import LocalProvider from '../LocalProvider/index.js';
 
 const changeOtherValue = (value, name, data, change) => {
