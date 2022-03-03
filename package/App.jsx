@@ -26,18 +26,18 @@ const { TextArea } = Input;
 const TabPane = Tabs.TabPane;
 
 import './index.css';
-import AceEditor from './components/AceEditor/AceEditor.js';
+import AceEditor from './components/AceEditor/AceEditor.jsx';
 import _ from 'underscore';
 import { connect } from 'react-redux';
-import SchemaJson from './components/SchemaComponents/SchemaJson.js';
+import SchemaJson from './components/SchemaComponents/SchemaJson.jsx';
 import PropTypes from 'prop-types';
 import { SCHEMA_TYPE, debounce } from './utils.js';
 import handleSchema from './schema';
 const GenerateSchema = require('generate-schema/src/schemas/json.js');
 const utils = require('./utils');
-import CustomItem from './components/SchemaComponents/SchemaOther.js';
+import CustomItem from './components/SchemaComponents/SchemaOther.jsx';
 import LocalProvider from './components/LocalProvider/index.js';
-import MockSelect from './components/MockSelect/index.js';
+import MockSelect from './components/MockSelect/index.jsxx';
 
 
 
