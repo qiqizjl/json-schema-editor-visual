@@ -3,8 +3,9 @@ import { render } from 'react-dom';
 import 'antd/dist/antd.css';
 
 import '../dist/main.css'
-const jeditor = require('../dist/main');
-//const jeditor = require('../package/index.js');
+
+import jeditor  from "../dist/main"
+
 const mock = [
   { name: '字符串', mock: '@string' },
   { name: '自然数', mock: '@natural' },
