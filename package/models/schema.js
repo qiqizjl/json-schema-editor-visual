@@ -1,7 +1,7 @@
 const _ = require('underscore');
-import utils from '../utils';
+import * as utils from '../utils.js';
 let fieldNum = 1;
-import handleSchema from '../schema.js';
+import {handleSchema} from '../schema.js';
 
 export default {
   state: {

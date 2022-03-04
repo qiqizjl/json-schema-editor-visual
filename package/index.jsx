@@ -1,33 +1,35 @@
 import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
+import {render} from 'react-dom'
+import {Provider} from 'react-redux'
 import App from './App.jsx'
-import utils from './utils'
+import * as utils from './utils.js'
 import moox from 'moox'
 import schema from './models/schema'
 import PropTypes from 'prop-types'
 
-export default  (config = {})=>{
-  if(config.lang) utils.lang = config.lang;
-  
+export default function (config = {}) {
+  if (config.lang) {
+    utils.setLang(config.lang);
+  }
+
+
   const Model = moox({
     schema
   })
-  if(config.format){
+  if (config.format) {
     Model.__jsonSchemaFormat = config.format
   } else {
     Model.__jsonSchemaFormat = utils.format
   }
 
-  if(config.mock) {
+  if (config.mock) {
     Model.__jsonSchemaMock = config.mock
   }
 
-  
 
   const store = Model.getStore();
 
-  const Component = (props)=>{
+  const Component = (props) => {
     return <Provider store={store} className="wrapper">
       <App Model={Model} {...props} />
     </Provider>

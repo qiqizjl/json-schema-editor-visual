@@ -1,8 +1,10 @@
 import React from 'react';
-import { Input, AutoComplete, Icon } from 'antd';
+import {Input, AutoComplete, Icon} from 'antd';
 import PropTypes from 'prop-types';
+
 const Option = AutoComplete.Option;
 import LocaleProvider from '../LocalProvider/index.js';
+import {EditOutlined} from "@ant-design/icons";
 
 export default class MockSelect extends React.Component {
   constructor(props, context) {
@@ -21,23 +23,36 @@ export default class MockSelect extends React.Component {
 
   render() {
     // const children = [];
-    const { schema } = this.props;
-    const children = this.mock.map((item) => <Option key={item.mock}>{item.mock}</Option>);
-
+    const {schema} = this.props;
+    const children = this.mock.map((item) => {
+      return {value: item.mock}
+    });
     return (
       <div>
         <AutoComplete
           className="certain-category-search"
           dropdownMatchSelectWidth={false}
-          dataSource={children}
-          placeholder={LocaleProvider('mock')}
-          optionLabelProp="value"
+          options={children}
+          // optionLabelProp="value"
           filterOption={true}
           value={schema.mock ? schema.mock.mock : ''}
           onChange={this.props.onChange}
           disabled={schema.type === 'object' || schema.type === 'array'}
         >
-          <Input addonAfter={<Icon type="edit" onClick={(e) => {e.stopPropagation(); this.props.showEdit()}} />} />
+          <Input
+            placeholder={LocaleProvider('mock')}
+            addonAfter={<EditOutlined
+              onClick={(e) => {
+                console.log("触发了onClick=>>>>")
+                this.props.showEdit()
+              }}
+              onMouseDown={(e) => {
+                console.log("触发了onMouseDown=>>>>")
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+            />}
+          />
         </AutoComplete>
       </div>
     );

@@ -12,7 +12,7 @@ function run(options) {
       curData.text = json;
       var obj = JSON.parse(json);
       curData.format = true;
-      curData.jsonData = obj;      
+      curData.jsonData = obj;
     } catch (e) {
       curData.format = e.message;
     }
@@ -78,4 +78,4 @@ function run(options) {
   return mockEditor;
 }
 
-module.exports = run;
+export default run;

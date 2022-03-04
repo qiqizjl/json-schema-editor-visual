@@ -197,7 +197,7 @@ class SchemaString extends PureComponent {
               dropdownClassName="json-schema-react-editor-adv-modal-select"
               placeholder="Select a format"
               optionFilterProp="children"
-              optionLabelProp="value"
+              // optionLabelProp="value"
               onChange={e => this.changeOtherValue(e, 'format', data)}
               filterOption={(input, option) => {
                 return option.props.value.toLowerCase().indexOf(input.toLowerCase()) >= 0;

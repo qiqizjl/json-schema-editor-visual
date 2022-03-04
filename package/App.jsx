@@ -32,7 +32,7 @@ import { connect } from 'react-redux';
 import SchemaJson from './components/SchemaComponents/SchemaJson.jsx';
 import PropTypes from 'prop-types';
 import { SCHEMA_TYPE, debounce } from './utils.js';
-import handleSchema from './schema';
+import { handleSchema } from './schema';
 import {json as GenerateSchema} from 'generate-schema'
 import  * as utils from "./utils"
 // const utils = require('./utils');
