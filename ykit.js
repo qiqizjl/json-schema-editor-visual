@@ -2,7 +2,7 @@ module.exports = {
     plugins: ['antd'],
     config: {
         exports: [
-            ['./src/index.js']            
+            ['./src/index.jsx']            
         ],
         modifyWebpackConfig: function(baseConfig) {
             baseConfig.context = require('path').resolve(__dirname);

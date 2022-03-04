@@ -1,6 +1,6 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
-  entry: './package/index.js',
+  entry: './package/index.jsx',
   mode: "production",
   output: {
     publicPath: "/dist/",
@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js(x)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"

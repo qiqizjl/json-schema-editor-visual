@@ -74,7 +74,7 @@
 
 
 .json-schema-react-editor .col-item-type{
-  text-align: center  
+  /*text-align: center  */
 }
 
 .json-schema-react-editor .down-style {
@@ -83,11 +83,11 @@
 
 
 .json-schema-react-editor .col-item-desc{
-  text-align: center  
+  /*text-align: center  */
 }
 
 .json-schema-react-editor .col-item-mock{
-  text-align: center;
+  /*text-align: center;*/
   padding-right: 6px;
 }
 

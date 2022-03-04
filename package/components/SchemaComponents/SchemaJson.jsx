@@ -21,7 +21,7 @@ import {
   PlusOutlined,
   CloseOutlined,
 } from '@ant-design/icons'
-import FieldInput from './FieldInput'
+import FieldInput from './FieldInput.jsx'
 
 const FormItem = Form.Item;
 const Option = Select.Option;
